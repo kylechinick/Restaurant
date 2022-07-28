@@ -1,12 +1,12 @@
+using BestRestaurants.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Restaurant.Models;
 
-namespace Restaurant
+namespace BestRestaurants
 {
     public class Startup
     {
@@ -27,7 +27,7 @@ namespace Restaurant
 
             services
                 .AddEntityFrameworkMySql()
-                .AddDbContext<RestaurantContext>(options =>
+                .AddDbContext<BestRestaurantsContext>(options =>
                     options
                         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"],
                         ServerVersion

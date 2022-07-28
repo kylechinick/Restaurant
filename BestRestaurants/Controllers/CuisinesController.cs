@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Restaurant.Models;
+using BestRestaurants.Models;
 
-namespace Restaurant.Controllers
+namespace BestRestaurants.Controllers
 {
     public class CuisinesController : Controller
     {
-        private readonly RestaurantContext _db;
+        private readonly BestRestaurantsContext _db;
 
-        public CuisinesController(RestaurantContext db)
+        public CuisinesController(BestRestaurantsContext db)
         {
             _db = db;
         }

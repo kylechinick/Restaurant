@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
+using BestRestaurants.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Restaurant.Models;
 
-namespace Restaurant.Controllers
+namespace BestRestaurants.Controllers
 {
     public class RestaurantsController : Controller
     {
-        private readonly RestaurantContext _db;
+        private readonly BestRestaurantsContext _db;
 
-        public RestaurantsController(RestaurantContext db)
+        public RestaurantsController(BestRestaurantsContext db)
         {
             _db = db;
         }
@@ -36,7 +36,7 @@ namespace Restaurant.Controllers
         [HttpPost]
         public ActionResult Create(Restaurant restaurant)
         {
-            _db.Restaurants.Add(restaurant);
+            _db.Restaurants.Add (restaurant);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }

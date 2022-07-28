@@ -1,4 +1,4 @@
-namespace Restaurant.Models
+namespace BestRestaurants.Models
 {
     public class Restaurant
     {
